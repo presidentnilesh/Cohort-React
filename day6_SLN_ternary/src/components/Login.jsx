@@ -10,9 +10,9 @@ const Login = ({setToggle}) => {
     return (
         <div className='bg-white p-4 rounded-xl  flex flex-col gap-6'>
             <p>Login form</p>
-            <form className='flex flex-col gap-4 m-4' action="">
-                <input onChange={handelChange} className='p-2 border border-gray-300 rounded hover:bg-blue-300' type="text" placeholder='Email' />
-                <input onChange={handelChange} className='p-2 border border-gray-300 rounded hover:bg-blue-300' type="text" placeholder='Password' />
+            <form onClick={(e)=>{ e.preventDefault()}} className='flex flex-col gap-4 m-4' action="">
+                <input name="email" onChange={handelChange} className='p-2 border border-gray-300 rounded hover:bg-blue-300' type="text" placeholder='Email' />
+                <input name="password" onChange={handelChange} className='p-2 border border-gray-300 rounded hover:bg-blue-300' type="password" placeholder='Password' />
                 <button onChange={handelChange} className='bg-blue-600 text-white rounded p-2 '>Login</button>
             </form>
             <div className='p-4 flex flex-col gap-6 '>
